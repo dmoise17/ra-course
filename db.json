@@ -2,53 +2,43 @@
   "users": [
     {
       "id": 1,
-      "UserName": "User 1",
-      "Password": "Password1"
+      "UserName": "jdoe",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "birthDate": "1978-11-20",
+      "email": "john.doe@google.com",
+      "website": "http://www.johndoe.com",
+      "Password": "MySecretPassword"
     },
     {
       "id": 2,
-      "UserName": "User 2",
-      "Password": "Password2"
+      "UserName": "parquette",
+      "FirstName": "Patricia",
+      "LastName": "Arquette",
+      "birthDate": "1980-09-12",
+      "email": "patricia.arquette@google.com",
+      "website": "http://www.patrica-arquette.com",
+      "Password": "Xxxxxxxx"
     },
     {
-      "id": 3,
-      "UserName": "User 3",
-      "Password": "Password3"
+      "id": 2,
+      "UserName": "jtravolta",
+      "FirstName": "John",
+      "LastName": "Travolta",
+      "birthDate": "1965-03-05",
+      "email": "john.travolta@google.com",
+      "website": "http://www.john-travolta.com",
+      "Password": "Xxxxxxxx"
     },
     {
+      "UserName": "dmoise",
+      "Password": "Xxxxxx",
       "id": 4,
-      "UserName": "User 4",
-      "Password": "Password4"
-    },
-    {
-      "id": 5,
-      "UserName": "User 5",
-      "Password": "Password5"
-    },
-    {
-      "id": 6,
-      "UserName": "User 6",
-      "Password": "Password6"
-    },
-    {
-      "id": 7,
-      "UserName": "User 7",
-      "Password": "Password7"
-    },
-    {
-      "id": 8,
-      "UserName": "User 8",
-      "Password": "Password8"
-    },
-    {
-      "id": 9,
-      "UserName": "User 9",
-      "Password": "Password9"
-    },
-    {
-      "id": 10,
-      "UserName": "User 10",
-      "Password": "Password10"
+      "FirstName": "Didier",
+      "LastName": "MOISE",
+      "birthDate": "1962-10-14",
+      "email": "dmoise@vedana.com",
+      "website": "http://www.vedana.com"
     }
   ]
 }

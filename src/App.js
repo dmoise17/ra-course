@@ -5,9 +5,10 @@ import jsonServerProvider from 'ra-data-json-server';
 import UserList from './features/users/UserList';
 import UserEdit from './features/users/UserEdit';
 import UserCreate from './features/users/UserCreate';
+import { MyTheme } from './MyTheme';
 
 const dataProvider = jsonServerProvider('http://localhost:3004');
-const App = () => <Admin dataProvider={dataProvider} >
+const App = () => <Admin dataProvider={dataProvider} theme={MyTheme}>
     <Resource name="users" list={UserList} edit={UserEdit} create={UserCreate}/> 
   </Admin>;
 

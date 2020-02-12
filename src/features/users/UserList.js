@@ -1,6 +1,6 @@
 import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
-import { Datagrid, DateField, EditButton, EmailField, List, NumberField, TextField, UrlField } from 'react-admin';
+import { Datagrid, DateField, EditButton, EmailField, Filter, List, NumberField, TextInput, TextField, UrlField } from 'react-admin';
 
 const styles = {
   button: {
@@ -10,6 +10,13 @@ const styles = {
   },
 };
 
+const UserFilters = (props) => (
+  <Filter {...props}>
+      <TextInput label="Search" source="UserName" alwaysOn />
+      <TextInput label="Last Name" source="LastName"/>
+  </Filter>
+);
+
 const MyEditButton = withStyles(styles)(({ classes, ...props }) => (
   <EditButton
       className={classes.button}
@@ -18,11 +25,11 @@ const MyEditButton = withStyles(styles)(({ classes, ...props }) => (
 ));
 
 const UserList = props => (
-  <List {...props}>
+  <List {...props} filters={<UserFilters />} sort={{ field: 'UserName', order: 'ASC' }}>
       <Datagrid rowClick="edit">
           <NumberField source="id" />
           <TextField source="UserName" />
-          <TextField source="FirstName" />
+          <TextField source="FirstName" sortable={false}/>
           <TextField source="LastName" />
           <DateField source="birthDate" />
           <EmailField source="email" />

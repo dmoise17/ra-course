@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core/';
 import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
-import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput } from 'react-admin';
+import { DateInput, NumberInput, ReferenceInput, SelectInput, TextInput, required, number, minValue } from 'react-admin';
 
 const styles = {
   root: {
@@ -11,6 +11,9 @@ const styles = {
     fontSize: '24px'
   }
 };
+
+const email = (message = 'Must be a valid email') =>
+    value => value && (value.indexOf('@') < 0) ? message : undefined;
 
 const UserSummary = ({ creation, classes, ...rest }) => (
   <Grid container spacing={2}>
@@ -23,7 +26,7 @@ const UserSummary = ({ creation, classes, ...rest }) => (
       <NumberInput source="id" disabled={!creation} />
     </Grid>
     <Grid item xs={12} sm={12} md={6} lg={3}>
-      <TextInput source="UserName" />
+      <TextInput source="UserName" validate={required()}/>
     </Grid>
     <Grid item xs={12} sm={12} md={6} lg={3}>
       <TextInput source="Password" type="password" />
@@ -38,7 +41,10 @@ const UserSummary = ({ creation, classes, ...rest }) => (
       <DateInput source="birthDate" />
     </Grid>
     <Grid item xs={12} sm={12} md={6} lg={3}>
-      <TextInput label="Email Address" source="email" type="email" />
+      <TextInput source="age" validate={[number(), minValue(18)]}/>
+    </Grid>
+    <Grid item xs={12} sm={12} md={6} lg={3}>
+      <TextInput label="Email Address" source="email" validate={email()} />
     </Grid>
     <Grid item xs={12} sm={12} md={6} lg={3}>
       <TextInput label="Web Site" source="website" type="url" />

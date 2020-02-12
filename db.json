@@ -8,7 +8,8 @@
       "birthDate": "1978-11-20",
       "email": "john.doe@google.com",
       "website": "http://www.johndoe.com",
-      "Password": "MySecretPassword"
+      "Password": "MySecretPassword",
+      "group": 1
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "birthDate": "1980-09-12",
       "email": "patricia.arquette@google.com",
       "website": "http://www.patrica-arquette.com",
-      "Password": "Xxxxxxxx"
+      "Password": "Xxxxxxxx",
+      "group": 2
     },
     {
       "id": 2,
@@ -28,7 +30,8 @@
       "birthDate": "1965-03-05",
       "email": "john.travolta@google.com",
       "website": "http://www.john-travolta.com",
-      "Password": "Xxxxxxxx"
+      "Password": "Xxxxxxxx",
+      "group": 1
     },
     {
       "UserName": "dmoise",
@@ -38,7 +41,22 @@
       "LastName": "MOISE",
       "birthDate": "1962-10-14",
       "email": "dmoise@vedana.com",
-      "website": "http://www.vedana.com"
+      "website": "http://www.vedana.com",
+      "group": 3
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Sales"
+    },
+    {
+      "id": 2,
+      "name": "Administration"
+    },
+    {
+      "id": 3,
+      "name": "Development"
     }
   ]
 }
